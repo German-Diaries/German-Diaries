@@ -1,0 +1,608 @@
+@font-face {
+    font-family: "Peachy Keen";
+    src: url("Peachy\ Keen\ JF.otf");
+}
+* {
+    font-family: 'Playfair Display', serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* scroll-up btn styling */
+.scroll-up-btn {
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background-color: rgba(0,0,0,0.95);
+    right: 20px;
+    bottom: 30px;
+    text-align: center;
+    line-height: 45px;
+    color: #f6b93b;
+    z-index: 999;
+    font-size: 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show {
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* left navbar styling */
+.navleft {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translate(0,-50%);
+    z-index: 999;
+}
+.wrapper {
+    transform: translateX(-100vw);
+}
+.navleft a {
+    margin-top: 0.5rem;
+    background-color: rgba(0,0,0,0.95);
+    color: #f6b93b !important;
+    font-size: 1.5rem;
+    position: relative;
+    transition: all 0.5s linear;
+    text-decoration: none;
+}
+.navleft a:hover {
+    color: rgba(0,0,0,0.95) !important;
+    background-color: #f6b93b;
+}
+.navleft a::after {
+    content: '';
+    height: 100%;
+    width: 7rem;
+    background-color: beige;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    display: grid;
+    place-items: center;
+    transition: all 0.3s linear;
+    transform: translateX(-50vw);
+    z-index: -1;
+}
+.navleft .wrapper:nth-child(2) {
+    animation-delay: 0.1s;
+}
+.navleft .wrapper:nth-child(3) {
+    animation-delay: 0.2s;
+}
+.navleft .wrapper:nth-child(4) {
+    animation-delay: 0.3s;
+}
+.navleft .wrapper:nth-child(5) {
+    animation-delay: 0.4s;
+}
+.navleft .wrapper:nth-child(6) {
+    animation-delay: 0.5s;
+}
+.navleft .wrapper:nth-child(1) a::after {
+    content: 'Home';
+}
+.navleft .wrapper:nth-child(2) a::after {
+    content: 'Puzzles';
+}
+/* .navleft .wrapper:nth-child(3) a::after {
+    content: 'German Literature';
+    width: 15rem;
+} */
+.navleft .wrapper:nth-child(3) a::after {
+    content: 'Stories';
+}
+.navleft .wrapper:nth-child(4) a::after {
+    content: 'Contact';
+}
+.navleft .wrapper:nth-child(5) a::after {
+    width: 0;
+}
+.navleft a:hover::after{
+    transform: translateX(0);
+    color: rgba(0,0,0,0.95);
+}
+
+/* home styling */
+.home {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 7rem;
+}
+.home .navbar , .navbar {
+  z-index: 998;
+  width: 100%;
+  background-color: white !important;
+}
+.home .navbar .navbar-brand img , .navbar-brand img {
+  width: 3rem;
+  height: 3rem;
+  margin-top: -1.3rem;
+}
+.home .navbar .navbar-brand h1 , .navbar-brand h1 {
+  margin-top: 1rem;
+  margin-left: 0.5rem;
+  font-family: "Peachy Keen";
+  font-size: 3rem;
+  color: rgba(0,0,0,0.95);
+}
+.home .container h1 {
+    font-size: 4rem;
+    color: #fff;
+}
+.home .container p {
+    font-size: 2rem;
+    color: #fff;
+    margin-top: 5rem;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+}
+.home img {
+    margin-top: 5rem;
+    width: 50%;
+}
+
+/* main section styling */
+.main {
+    margin-top: 5rem;
+    width: 90% !important;
+}
+.cont {
+    margin: 0 0rem !important;
+}
+.main-a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: rgba(0,0,0,0.95);
+    line-height: 3rem;
+    position: relative;
+}
+.main-a .fa-angle-right {
+    margin-right: 1rem;
+    color: transparent;
+    transition: all 0.5s ease-in;
+}
+.main-a:hover > .fa-angle-right{
+    color: rgba(0,0,0,0.95);
+}
+.main-a:hover {
+    color: grey;
+}
+.main-col2 img, .main-col4 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s linear;
+}
+.main-col2 h1 {
+    color: rgba(0,0,0,0.95);
+    position: relative;
+}
+.main-col2 h1::after {
+    content: '';
+    width: 42.6rem;
+    height: 2px;
+    background: rgba(0,0,0,0.95);
+    position: absolute;
+    top: 80%;
+    left: 110%;
+}
+.main-col2 a , .main-col4 a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+.caption {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.5s linear;
+}
+.caption p {
+    text-transform: capitalize;
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+.caption .fas {
+    font-size: 2rem;
+}
+.main-col2 a:hover img , .main-col4 a:hover img{
+    transform: scale(1.1);
+}
+.main-col2 a:hover .caption , .main-col4 a:hover .caption{
+    opacity: 1;
+}
+.main-col3 div{
+    background:rgba(158, 157, 157, 0.3);
+    text-align: center;
+}
+.main-col3 img{
+    width: 65%;
+    height: 15rem;
+    border-radius: 50%;
+    margin: 2rem 4rem;
+    border: 2px solid white;
+}
+.main-col3 p{
+    text-align: justify;
+}
+.main-col3 h1 {
+    font-size: 1.5rem;
+    position: relative;  
+}
+.main-col3 h1::before{
+    content: '';
+    width: 80%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: -90%;
+}
+.main-col3 h1::after{
+    content: '';
+    width: 80%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    top: 50%;
+    right: -90%;
+}
+.main-col3 .main-a .fab {
+    margin-top: 2rem;
+    border-radius: 50%;
+    padding: 1rem;
+    transition: all 0.5s ease-in;
+    color: black;
+    background-color: #fff;
+}
+.main-col3 .main-a .fab:hover {
+    background: #f6b93b;
+    color: white;
+}
+
+/* ----anim------ */
+.main-col3 {
+    transform: translateX(100vw);
+    transition: transform 1s ease-in;
+    position: relative;
+}
+.main-active {
+    animation: come 1s forwards; 
+}
+
+@keyframes come {
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* ----Home form styling--------- */
+.contact {
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(img/formbg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-top: 5rem;
+    padding: 7rem 0;
+}
+.contact-col {
+    width: 40%;
+    margin: auto;
+    text-align: center;
+}
+.contact-col input, .contact-col textarea {
+    width: 100%;
+    padding: 1rem 2rem;
+    margin-bottom: 1rem;
+    outline: none;
+    border-radius: 2rem;
+    border: 1px solid #ccc;
+    background-color: #ccc;
+}
+.hero-btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 2rem;
+    outline: none;
+    transition: all 0.5s linear;
+    border: 3px solid rgba(0, 0, 0, 0.5);
+    background-color: #ccc;
+}
+.hero-btn:hover {
+    background-color: rgba(0,0,0,0.95);
+    color: #ccc;
+}
+.contact h1 {
+    display: inline-block;
+    color: #ccc;
+    position: relative;
+}
+.contact h1::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: #ccc;
+    position: absolute;
+    left: 0;
+    bottom: -12%;
+    transition: width 1s linear;
+}
+.contact h1:hover::after {
+    width: 100%;
+}
+
+/* ------footer styling------ */
+.foot {
+    position: relative;
+    bottom: 0;
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: beige;
+}
+.brand {
+    text-decoration: none;
+}
+.brand img {
+  width: 3rem;
+  height: 3rem;
+  margin-top: -1.3rem;
+}
+.brand h1 {
+    color: rgba(0,0,0,0.95);
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+    font-family: "Peachy Keen";
+}
+.foot .main-a {
+    display: inline-block;
+    margin-top: 3rem;
+    border-radius: 50%;
+    padding: 0.3rem 1rem;
+    transition: all 0.5s linear;
+    background-color: #ccc;
+}
+.foot .main-a:hover {
+    background-color: #f6b93b;
+    color: #fff;
+}
+.foot p {
+    margin-top: 3rem;
+    color: rgba(0,0,0,0.95);
+}
+
+/* german literature */
+.heading {
+    color: rgba(0,0,0,0.95);
+}
+.fb {
+    margin-top: 3rem;
+    flex: 33.3%;
+    width: auto;
+    overflow: hidden;
+    padding: 0 4px;
+    height: 100%;
+}
+.fb img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.f {
+    margin-top: 6rem;
+}
+
+
+.dhead {
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+}
+.head {
+    color: rgba(0,0,0,0.95);
+    position: relative;
+    margin-top: 3rem;
+    display: inline-block;
+}
+.head::after {
+    content: '';
+    width: 80%;
+    height: 2px;
+    background: rgba(0,0,0,0.95);
+    position: absolute;
+    top: 50%;
+    left: -90%; 
+    animation: wid 2s linear;
+}
+.head::before {
+    content: '';
+    width: 80%;
+    height: 2px;
+    background: rgba(0,0,0,0.95);
+    position: absolute;
+    top: 50%;
+    right: -90%;
+    animation: wid 2s linear;
+}
+@keyframes wid {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 80%;
+    }
+}
+
+/* form styling */
+.man {
+    background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url(img/formbg2.jfif);
+    background-size: 100% 100%;
+    object-fit: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.center {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 3rem;
+    box-shadow: 3px 3px 16px 1px rgba(0,0,0,0.45);
+    -webkit-box-shadow: 3px 3px 16px 1px rgba(0,0,0,0.45);
+    -moz-box-shadow: 3px 3px 16px 1px rgba(0,0,0,0.45);
+    border-radius: 10px;
+}
+
+@media (max-width: 1200px) {
+    /* Puzzles page */
+    .literature .caption .fas,.literature .caption p{
+        font-size: 1rem;
+    }
+}
+@media (max-width: 1000px) {
+    .caption .fas, .caption p{
+        font-size: 1.5rem;
+    }
+    .main-col2 .hero-btn {
+        padding: 0.5rem 1rem !important;
+        font-size: 1rem !important;
+    }
+}
+@media (max-width: 800px) {
+    .navleft a{
+        margin-top: 0.3rem;
+        font-size: 1rem;
+    }
+    .main-col3 img {
+        width: 50%;
+        height: 10rem;
+    }
+    .main-col3 h1 {
+        font-size: 1rem;
+    }
+    .main-col3 p{
+        font-size: 0.8rem;
+    }
+    .main-col3 .main-a .fab {
+        margin-top: 1rem;
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+    .contact-col {
+        width: 70%;
+    }
+    .caption p, .caption .fas {
+        font-size: 1rem;
+    }
+}
+@media (max-width: 650px) {
+    .main-col3 {
+        display: flex !important;
+        flex-direction: column !important;
+        flex-wrap: nowrap;
+    }
+    .main-col3 img {
+        width: 60%;
+        height: 8rem;
+        margin: 2rem 1rem;
+    }
+    .main-col3 h1 {
+        font-size: 1rem;
+    }
+    .main-col3 p{
+        font-size: 0.6rem;
+    }
+    .main-col3 .main-a .fab {
+        margin-top: 1rem;
+        padding: 0.8rem;
+        font-size: 1rem;
+    }
+
+    /* Puzzles Page */
+    .literature .row .col-12 {
+        flex: 100%;
+    }
+}
+@media (max-width: 600px) {
+    
+    .main-col3 img {
+        display: block;
+        width: 60%;
+        height: 7rem;
+        margin: 1.5rem 2.5rem;    
+    }
+}
+@media (max-width: 580px) {
+    .main-col3 {
+        margin-top: 3rem !important;
+    }
+    .main-col3 div {
+        width: 75%;
+        margin: auto;
+    }
+    .main-col3 img {
+        width: 50%;
+        height: 10rem;
+        margin: 1.5rem 4.5rem;    
+    }
+}
+@media (max-width: 400px) {
+    .home .navbar .navbar-brand h1 , .navbar-brand h1 { 
+      font-size: 2rem;
+    }
+    .home .navbar .navbar-brand img , .navbar-brand img {
+      width: 2rem;
+      height: 2rem;
+      margin-top: -0.5rem;
+    }
+    .main-col2 h1::after {
+        width: 10rem;
+    }
+    .main-col3 img {
+        margin: auto;
+        height: 8rem;    
+    }
+    .main-col3 h1 {
+        margin-bottom: 1rem;
+    }
+    .main-col3 p {
+        margin-top: 1rem;
+    }
+    .brand img {
+      width: 2rem;
+      height: 2rem;
+      margin-top: -0.5rem;
+    }
+    .foot p {
+        font-size: 0.8rem;
+    }
+    .brand h1 {
+        color: rgba(0,0,0,0.95);
+        margin-top: 1rem;
+        margin-left: 0.5rem;
+        font-family: "Peachy Keen";
+    }
+    /* Puzzles Page */
+    .fb {
+        padding: 0 3rem;
+    }
+}
