@@ -513,6 +513,10 @@ html {
     .caption p, .caption .fas {
         font-size: 1rem;
     }
+    /* Puzzles Page */
+    .literature .row .col-12 {
+        flex: 100%;
+    }
 }
 @media (max-width: 650px) {
     .main-col3 {
@@ -537,10 +541,6 @@ html {
         font-size: 1rem;
     }
 
-    /* Puzzles Page */
-    .literature .row .col-12 {
-        flex: 100%;
-    }
 }
 @media (max-width: 600px) {
     
