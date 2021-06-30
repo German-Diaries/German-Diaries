@@ -222,11 +222,11 @@ html {
 }
 .caption p {
     text-transform: capitalize;
-    font-size: 2rem;
+    font-size: 3.5rem;
     margin-top: 2rem;
 }
 .caption .fas {
-    font-size: 2rem;
+    font-size: 3rem;
 }
 .main-col2 a:hover img , .main-col4 a:hover img{
     transform: scale(1.1);
@@ -475,12 +475,12 @@ html {
 @media (max-width: 1200px) {
     /* Puzzles page */
     .literature .caption .fas,.literature .caption p{
-        font-size: 1rem;
+        font-size: 3rem;
     }
 }
 @media (max-width: 1000px) {
     .caption .fas, .caption p{
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
     .main-col2 .hero-btn {
         padding: 0.5rem 1rem !important;
