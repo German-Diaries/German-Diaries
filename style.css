@@ -222,11 +222,11 @@ html {
 }
 .caption p {
     text-transform: capitalize;
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin-top: 2rem;
 }
 .caption .fas {
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 .main-col2 a:hover img , .main-col4 a:hover img{
     transform: scale(1.1);
@@ -234,25 +234,25 @@ html {
 .main-col2 a:hover .caption , .main-col4 a:hover .caption{
     opacity: 1;
 }
-.main-col3 div{
+.main-col3 .d1{
     background:rgba(158, 157, 157, 0.3);
     text-align: center;
 }
-.main-col3 img{
+.main-col3 .d1 img{
     width: 65%;
     height: 15rem;
     border-radius: 50%;
     margin: 2rem 4rem;
     border: 2px solid white;
 }
-.main-col3 p{
+.main-col3 .d1 p{
     text-align: justify;
 }
-.main-col3 h1 {
+.main-col3 .d1 h1 {
     font-size: 1.5rem;
     position: relative;  
 }
-.main-col3 h1::before{
+.main-col3 .d1 h1::before{
     content: '';
     width: 80%;
     height: 2px;
@@ -261,7 +261,7 @@ html {
     top: 50%;
     left: -90%;
 }
-.main-col3 h1::after{
+.main-col3 .d1 h1::after{
     content: '';
     width: 80%;
     height: 2px;
@@ -270,7 +270,7 @@ html {
     top: 50%;
     right: -90%;
 }
-.main-col3 .main-a .fab {
+.main-col3 .d1 .main-a .fab {
     margin-top: 2rem;
     border-radius: 50%;
     padding: 1rem;
@@ -278,9 +278,19 @@ html {
     color: black;
     background-color: #fff;
 }
-.main-col3 .main-a .fab:hover {
+.main-col3 .d1 .main-a .fab:hover {
     background: #f6b93b;
     color: white;
+}
+.main-col3 .d2 {
+    border-radius: 10px;
+    margin-top: 10rem;
+    overflow: hidden;
+}
+.main-col3 .d2 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
 }
 
 /* ----anim------ */
@@ -475,16 +485,22 @@ html {
 @media (max-width: 1200px) {
     /* Puzzles page */
     .literature .caption .fas,.literature .caption p{
-        font-size: 3rem;
+        font-size: 1rem;
+    }
+    .main-col2 h1 {
+        font-size: 2rem;
     }
 }
 @media (max-width: 1000px) {
     .caption .fas, .caption p{
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     .main-col2 .hero-btn {
         padding: 0.5rem 1rem !important;
         font-size: 1rem !important;
+    }
+    .main-col2 h1 {
+        font-size: 1.5rem;
     }
 }
 @media (max-width: 800px) {
@@ -540,7 +556,9 @@ html {
         padding: 0.8rem;
         font-size: 1rem;
     }
-
+    .main-col2 h1 {
+        font-size: 1.2rem;
+    }
 }
 @media (max-width: 600px) {
     
@@ -564,16 +582,16 @@ html {
         height: 10rem;
         margin: 1.5rem 4.5rem;    
     }
+    .caption p, .caption .fas {
+        font-size: 2rem;
+    }
+}
+@media (max-width: 570px) {
+    .main-col2 h1 {
+        font-size: 2rem;
+    }
 }
 @media (max-width: 400px) {
-    .home .navbar .navbar-brand h1 , .navbar-brand h1 { 
-      font-size: 2rem;
-    }
-    .home .navbar .navbar-brand img , .navbar-brand img {
-      width: 2rem;
-      height: 2rem;
-      margin-top: -0.5rem;
-    }
     .main-col2 h1::after {
         width: 10rem;
     }
@@ -587,22 +605,18 @@ html {
     .main-col3 p {
         margin-top: 1rem;
     }
-    .brand img {
-      width: 2rem;
-      height: 2rem;
-      margin-top: -0.5rem;
-    }
     .foot p {
         font-size: 0.8rem;
     }
-    .brand h1 {
-        color: rgba(0,0,0,0.95);
-        margin-top: 1rem;
-        margin-left: 0.5rem;
-        font-family: "Peachy Keen";
-    }
+
     /* Puzzles Page */
+    .head {
+        font-size: 1.5rem;
+    }
     .fb {
         padding: 0 3rem;
+    }
+    .caption p, .caption .fas {
+        font-size: 1.5rem;
     }
 }
