@@ -24,3 +24,24 @@ $(document).ready(() => {
         loop: true
     });
 });
+let main = document.querySelector(".main-div");
+let bucket = document.querySelector(".bucket");
+let main1 = document.querySelector(".main-div1");
+let bucket1 = document.querySelector(".bucket1");
+let main2 = document.querySelector(".main-div2");
+let bucket2 = document.querySelector(".bucket2");
+
+function load() {
+    main.style.display = 'none';
+    bucket.style.display = "block";
+}
+
+function load1() {
+    main1.style.display = 'none';
+    bucket1.style.display = "block";
+}
+
+function load2() {
+    main2.style.display = 'none';
+    bucket2.style.display = "block";
+}
