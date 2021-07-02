@@ -13,7 +13,6 @@ html {
 .main-div, .main-div1, .main-div2 {
     width: 100%;
     height: 100vh;
-    background-color: beige;
     display: grid;
     place-items: center;
 }
