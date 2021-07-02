@@ -10,99 +10,120 @@
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Puzzles Page</title>
+    <style>
+        .main-div1 {
+            display: grid;
+        }
+
+        .bucket1 {
+            display: none;
+        }
+    </style>
 </head>
 
-<body>
-    <!-- Scroll-up btn -->
-    <div class="scroll-up-btn">
-        <i class="fas fa-angle-up"></i>
+<body onload="load1()">
+    
+    <!-- ----loader------ -->
+    <div class="main-div1">
+        <div class="center-div">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
 
-    <!-- left side navbar -->
-    <div class="navleft">
-        <nav class="nav flex-column">
-            <div class="wrapper">
-                <a class="nav-link active" aria-current="page" href="index.html"><i class="fas fa-home"></i></a>
-            </div>
-            <div class="wrapper">
-                <a class="nav-link" href="Puzzles.html"><i class="fas fa-puzzle-piece"></i></a>
-            </div>
-            <!-- <div class="wrapper">
+    <div class="bucket1">
+        <!-- Scroll-up btn -->
+        <div class="scroll-up-btn">
+            <i class="fas fa-angle-up"></i>
+        </div>
+
+        <!-- left side navbar -->
+        <div class="navleft">
+            <nav class="nav flex-column">
+                <div class="wrapper">
+                    <a class="nav-link active" aria-current="page" href="index.html"><i class="fas fa-home"></i></a>
+                </div>
+                <div class="wrapper">
+                    <a class="nav-link" href="Puzzles.html"><i class="fas fa-puzzle-piece"></i></a>
+                </div>
+                <!-- <div class="wrapper">
                 <a class="nav-link" href="GermanLiterature.html"><i class="fas fa-pen-fancy"></i></a>
             </div> -->
-            <div class="wrapper">
-                <a class="nav-link" href="Stories.html"><i class="fas fa-book-reader"></i></a>
-            </div>
-            <div class="wrapper">
-                <a class="nav-link" href="index.html"><i class="fas fa-envelope"></i></a>
-            </div>
-            <div class="wrapper">
-                <a class="nav-link" href="https://www.instagram.com/german_diaries_/"
-                    target="_blank"><i class="fab fa-instagram"></i></a>
+                <div class="wrapper">
+                    <a class="nav-link" href="Stories.html"><i class="fas fa-book-reader"></i></a>
+                </div>
+                <div class="wrapper">
+                    <a class="nav-link" href="index.html"><i class="fas fa-envelope"></i></a>
+                </div>
+                <div class="wrapper">
+                    <a class="nav-link" href="https://www.instagram.com/german_diaries_/" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Home section -->
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid d-flex align-items-center justify-content-center">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/logo2.svg" alt="" class="d-inline-block align-text-top">
+                    <h1 class="d-inline-block heading">German Diaries</h1>
+                </a>
             </div>
         </nav>
-    </div>
 
-    <!-- Home section -->
-    <nav class="navbar navbar-light bg-light">
-        <div class="container-fluid d-flex align-items-center justify-content-center">
-            <a class="navbar-brand" href="index.html">
+        <!-- image gallery -->
+        <div class="dhead overflow-hidden w-75 m-auto">
+            <h1 class="head">Word Search Puzzles</h1>
+        </div>
+        <div class="container conta literature">
+            <div class="row w-100 d-flex flex-wrap m-auto">
+                <div class="col-12 fb main-col2">
+                    <a href="img/puzzle1.jpeg" class="m-auto" download>
+                        <img src="img/puzzle1.jpeg" alt="">
+                        <div class="caption">
+                            <i class="fas fa-download"></i>
+                            <p>Download</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 fb main-col2">
+                    <a href="img/puzzle2.jpeg" class="m-auto" download>
+                        <img src="img/puzzle2.jpeg" alt="">
+                        <div class="caption">
+                            <i class="fas fa-download"></i>
+                            <p>Download</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-12 fb main-col2">
+                    <a href="img/puzzle3.png" class="m-auto" download>
+                        <img src="img/puzzle3.png" alt="">
+                        <div class="caption">
+                            <i class="fas fa-download"></i>
+                            <p>Download</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ----footer----------- -->
+        <footer class="foot f">
+            <a class="brand" href="index.html">
                 <img src="img/logo2.svg" alt="" class="d-inline-block align-text-top">
-                <h1 class="d-inline-block heading">German Diaries</h1>
-            </a>
-        </div>
-    </nav>
-
-    <!-- image gallery -->
-    <div class="dhead overflow-hidden w-75 m-auto">
-        <h1 class="head">Word Search Puzzles</h1>
+                <h1 class="d-inline-block">German Diaries</h1>
+            </a><br>
+            <a href="https://www.instagram.com/german_diaries_/" target="_blank" class="main-a"><i
+                    class="fab fa-instagram"></i></a>
+            <p>Content By: Apurva, Design By: A.M.Designers <i class="far fa-copyright"></i> 2021. All rights reserved.
+            </p>
+        </footer>
     </div>
-    <div class="container conta literature">
-        <div class="row w-100 d-flex flex-wrap m-auto">
-            <div class="col-12 fb main-col2">
-                <a href="img/puzzle1.jpeg" class="m-auto" download>
-                    <img src="img/puzzle1.jpeg" alt="">
-                    <div class="caption">
-                        <i class="fas fa-download"></i>
-                        <p>Download</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-12 fb main-col2">
-                <a href="img/puzzle2.jpeg" class="m-auto" download>
-                    <img src="img/puzzle2.jpeg" alt="">
-                    <div class="caption">
-                        <i class="fas fa-download"></i>
-                        <p>Download</p>
-                    </div>
-                </a>
-            </div>
-            <div class="col-12 fb main-col2">
-                <a href="img/puzzle3.png" class="m-auto" download>
-                    <img src="img/puzzle3.png" alt="">
-                    <div class="caption">
-                        <i class="fas fa-download"></i>
-                        <p>Download</p>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- ----footer----------- -->
-    <footer class="foot f">
-        <a class="brand" href="index.html">
-            <img src="img/logo2.svg" alt="" class="d-inline-block align-text-top">
-            <h1 class="d-inline-block">German Diaries</h1>
-        </a><br>
-        <a href="https://www.instagram.com/german_diaries_/" target="_blank" class="main-a"><i
-                class="fab fa-instagram"></i></a>
-        <p>Content By: Apurva, Design By: A.M.Designers <i class="far fa-copyright"></i> 2021. All rights reserved.</p>
-    </footer>
-
-    <script src="js/jquery-3.6.0.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
+        <script src="js/jquery-3.6.0.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="script.js"></script>  
 </body>
 
 </html>
