@@ -1,8 +1,8 @@
 $(document).ready(() => {
     $(".wrapper").addClass('main-active');
     $(window).scroll(() => {
-        if (this.scrollY > 300) {
-            $(".main-col2, .main-col3").addClass('main-active');
+        if (this.scrollY > 150) {
+            $(".main-col3").addClass('main-active');
         }
         if(this.scrollY > 500){
             $('.scroll-up-btn').addClass("show");
