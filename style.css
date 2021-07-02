@@ -9,6 +9,50 @@ html {
     scroll-behavior: smooth;
 }
 
+/* -----loader------ */
+.main-div, .main-div1, .main-div2 {
+    width: 100%;
+    height: 100vh;
+    background-color: beige;
+    display: grid;
+    place-items: center;
+}
+.center-div{
+    width: 8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.center-div span{
+    width: 2rem;
+    height: 2rem;
+    background-color: #f6b93b;
+    border-radius: 50%;
+    position: relative;
+    animation: mov 1s linear infinite;
+}
+.center-div span:nth-child(2){
+    animation-delay: 0.2s;
+}
+.center-div span:nth-child(3){
+    animation-delay: 0.4s;
+}
+.bucket {
+    display: none;
+}
+@keyframes mov {
+    0% {
+        transform: translateY(0%);
+    }
+    50% {
+        transform: translateY(150%);
+    }
+    0% {
+        transform: translateY(0%);
+    }
+}
+
+
 /* scroll-up btn styling */
 .scroll-up-btn {
     position: fixed;
