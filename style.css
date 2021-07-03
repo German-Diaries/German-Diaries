@@ -41,15 +41,20 @@ html {
 }
 @keyframes mov {
     0% {
-        transform: translateY(0%);
-    }
-    50% {
-        transform: translateY(150%);
-    }
-    0% {
-        transform: translateY(0%);
-    }
-}
+                transform: translateY(0%);
+            }
+            25% {
+                transform: translateY(-150%);
+            }
+
+            50% {
+                transform: translateY(0%);
+            }
+
+            100% {
+                transform: translateY(0%);
+            }
+        }
 
 
 /* scroll-up btn styling */
