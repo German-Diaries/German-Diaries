@@ -58,3 +58,6 @@ function load2() {
     main2.style.display = 'none';
     bucket2.style.display = "block";
 }
+
+let year = document.getElementById("year");
+year.innerText = new Date().getFullYear().toString();
